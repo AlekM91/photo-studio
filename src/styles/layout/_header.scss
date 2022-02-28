@@ -1,0 +1,79 @@
+// Header
+.header-top {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    margin: auto;
+
+    .header-top-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        color: $white;
+    }
+}
+
+.main-heading {
+    text-transform: uppercase;
+    font-size: 36px;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    color: $white;
+    text-align: center;
+
+    @include media-up(m) {
+        font-size: 54px;
+    }
+
+    @include media-up(xl) {
+        font-size: 72px;
+    }
+}
+
+@include media-up(m) {
+    .header-mid {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    
+        
+        .swiper-pagination {
+            position: absolute;
+            left: auto;
+            bottom: auto;
+            top: 50%;
+            right: 0;
+            transform:translateY(-50%)!important;
+        }
+
+    }
+}
+
+
+.social-media-large {
+    display: none;
+    
+    @include media-up(m) {
+        display: flex;
+    }
+
+    .social {
+        transition: .2;
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+
+

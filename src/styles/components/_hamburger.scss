@@ -1,0 +1,39 @@
+.hamburger {
+    width: 20px;
+    height: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+
+    @include media-up(m) {
+        width: 24px;
+        height: 15px;
+    }
+
+    div {
+        height: 2px;
+        background: $white;
+        border-radius: 2px;
+
+    }
+
+    &-active {
+
+        div {
+
+            &:first-child {
+                animation: slideDown linear .2s forwards;
+                
+            }
+
+            &:nth-child(2) {
+                animation: hamburgerSlide linear .2s forwards;
+            }
+
+            &:last-child {
+                animation: slideUp linear .2s forwards
+            }
+        }
+    }
+}

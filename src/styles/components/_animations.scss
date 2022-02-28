@@ -1,0 +1,25 @@
+@keyframes hamburgerSlide {
+    20% {transform:translateX(-5px)}
+    60% {transform:translateX(10px); }
+    100% {transform: translateX(10px); opacity: 0; }
+}
+
+@keyframes slideDown {
+    70% {transform:translateY(3px)}
+    100% {transform: rotate(45deg) translate(4px, 3px)}
+}
+
+@keyframes slideUp {
+    70% {transform:translateY(-3px)}
+    100% {transform: rotate(-45deg) translate(4px, -3px)}
+}
+
+@include media-up(m) {
+    @keyframes slideDown {
+        100% { transform: rotate(45deg) translate(6px,3px);}
+    }
+    @keyframes slideUp {
+        100% { transform: rotate(-45deg) translate(5px,-3px);}
+    }
+}
+

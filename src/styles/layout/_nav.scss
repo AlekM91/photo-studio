@@ -1,0 +1,101 @@
+// Main navigation
+.main-nav {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    color: $white;
+    z-index: 5;
+    transition: .2s;
+    background: rgba(43, 43, 45, 0.7);
+
+    &-active {
+        left: 0;
+    }
+    
+    ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        li {
+            padding: 15px;
+            a {
+                display: inline-block;
+                padding: 12px;
+            }
+        }
+    }
+
+    .social-media {
+        width: 166px;
+        height: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        opacity: 1;
+        transition: .2s;
+
+        .social {
+            width: 22px;
+            height: 22px;
+            cursor: pointer;
+        }
+    }
+
+    @include media-up(m) {
+        left: auto;
+        right: -30%;
+        width: 30%;
+
+        &-active {
+            right: 0;
+        }
+
+        ul {
+            li {
+                a {
+                    letter-spacing: 2px;
+                    opacity: 0.7;
+                    position: relative;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 100%;
+                        left: 50%;
+                        width: 0;
+                        height: 1px;
+                        background: $white;
+                        transform: translateX(-50%);
+                        transition: .2s;   
+                    }
+
+                    &:hover {
+                       &::after {
+                        width: 100%;
+                       }
+                    }  
+                }
+            }
+        }
+
+        .social-media {
+            display: none;
+        }
+    }
+
+    @include media-landscape {
+        ul {
+
+            li {
+                padding: 5px;
+            }
+        }
+    }
+}

@@ -1,0 +1,9 @@
+.js-pagination-hidden {
+    opacity: 0;
+}
+
+.js-heading-hidden {
+    @include media-down(m) {
+        display: none;
+    }
+}
