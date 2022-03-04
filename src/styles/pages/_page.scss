@@ -1,0 +1,140 @@
+.page-general {
+    position: relative;
+
+    .header-top {
+        position: fixed;
+
+        .logo {
+            color: $primary;
+        }
+    
+        .hamburger {
+    
+            div {
+                background: $primary;
+
+                @include media-up(m) {
+                    background: white;
+                }
+            }
+        }
+    }
+
+    .main-nav {
+        position: fixed;
+    }
+}
+
+.page-content {
+    padding-top: 84px;
+
+    @include media-up(m) {
+        padding-top: 0;
+    }
+    
+    .page-top {
+
+        @include media-down(m) {
+            padding: 0;
+            max-width: 100%;
+        }
+
+        .top-content {
+            padding: 0 60px;
+
+
+            @include media-up(s) {
+                padding: 0;
+                @include make-wrapper();
+                @include make-wrapper-max-widths();
+                
+            }
+        }
+
+        .img-content {
+            background: $primary;
+
+            .image {
+                padding: 0 60px 60px 60px;
+
+                img {
+                    width: 100%;
+                }
+
+                @include media-up(s) {
+                    @include make-wrapper();
+                    @include make-wrapper-max-widths();
+                    
+                    padding-bottom: 60px;
+                }
+            }
+        }
+
+        @include media-up(m) {
+            display: flex;
+
+            .top-content {
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+                padding: 122px 0;
+            }
+
+            .img-content {
+                flex: 1;
+                position: relative;
+                padding: 122px 0 122px 0;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    z-index: -1;
+                    width: 200%;
+                    height: 100%;
+                    background: $primary;
+                    top: 0;
+                    left: 0;
+                }
+
+                .image {
+                    padding: 0;
+                }
+            }
+        }
+    }
+
+    .page-mid {
+        margin: 33px 0;
+
+        @include media-up(m) {
+            @include make-wrapper();
+            @include make-wrapper-max-widths();
+            margin: 100px auto;
+        }
+    }
+
+    .page-bottom {
+
+        .img-content-bottom {
+            display: flex;
+
+            .img-1 {
+                margin-right: 20px;
+            }
+        }
+
+        @include media-up(m) {
+            @include make-wrapper();
+            @include make-wrapper-max-widths();
+
+           .img-content-bottom {
+                .img-1 {
+                    margin-right: 50px;
+                }
+           }
+        }
+    }   
+}
+
+
+// Test overflow
