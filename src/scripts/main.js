@@ -50,4 +50,3 @@ let observer = new IntersectionObserver(function(entries, observer) {
 
 // observer.observe(topPage)
 
-console.log(document.title)
