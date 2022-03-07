@@ -27,3 +27,27 @@ const swiper = new Swiper('.swiper', {
 
 let menu = new Menu;
 
+// Quick intersection observer to fix the hamburger icon blending with the white background
+// Enable at your own personal choice
+// Change color in js-hamburger-color
+let topPage = document.querySelector('.page-top');
+let hamburger = document.querySelector('.hamburger');
+
+let observer = new IntersectionObserver(function(entries, observer) {
+    let [entry] = entries;
+    console.log(entry)
+    hamburger.classList.remove('js-hamburger-color')
+
+    if(entry.isIntersecting) return
+    hamburger.classList.add('js-hamburger-color')
+
+    console.log(entry.target)
+   
+}, {
+    root: null,
+    threshold: 0
+})
+
+// observer.observe(topPage)
+
+console.log(document.title)

@@ -3,9 +3,8 @@ class Menu {
         this.hamburger = document.querySelector('.hamburger');
         this.mainNav = document.querySelector('.main-nav'); 
         this.jsPagination = document.querySelector('.js-pagination');
-        this.mainHeading = document.querySelector('.main-heading')
-
-        this.events()
+        this.mainHeading = document.querySelector('.main-heading');
+        this.events();
     }
 
     events() {
@@ -15,8 +14,10 @@ class Menu {
     open() {
         this.hamburger.classList.toggle('hamburger-active');
         this.mainNav.classList.toggle('main-nav-active');
-        this.jsPagination.classList.toggle('js-pagination-hidden');
-        this.mainHeading.classList.toggle('js-heading-hidden');
+        if(document.title === 'Photo Studio') {
+            this.jsPagination.classList.toggle('js-pagination-hidden')
+            this.mainHeading.classList.toggle('js-heading-hidden');
+        }
     }
 
     close() {

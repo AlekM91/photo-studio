@@ -1,3 +1,20 @@
 .button {
-  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 60px;
+    width: 60px;
+    height: 24px;
+    cursor: pointer;
+    background: #FF8A00;
+    margin: auto;
+    transition: .2s;
+
+    &:hover {
+        transform: translateY(-2px);
+    }
+
+    &:active {
+        transform: translateY(-1px)
+    }
 }

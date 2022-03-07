@@ -4,6 +4,12 @@
 
 .js-heading-hidden {
     @include media-down(m) {
-        display: none;
+        display: none !important;
+    }
+}
+
+.js-hamburger-color {
+    div {
+        background: $primary !important;
     }
 }

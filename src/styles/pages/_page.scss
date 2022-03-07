@@ -27,6 +27,7 @@
 
 .page-content {
     padding-top: 84px;
+    overflow-x: hidden;
 
     @include media-up(m) {
         padding-top: 0;
@@ -41,7 +42,6 @@
 
         .top-content {
             padding: 0 60px;
-
 
             @include media-up(s) {
                 padding: 0;
@@ -83,13 +83,13 @@
             .img-content {
                 flex: 1;
                 position: relative;
-                padding: 122px 0 122px 0;
+                padding: 122px 0;
 
                 &::after {
                     content: "";
                     position: absolute;
                     z-index: -1;
-                    width: 200%;
+                    width: 400%;
                     height: 100%;
                     background: $primary;
                     top: 0;
@@ -105,6 +105,14 @@
 
     .page-mid {
         margin: 33px 0;
+
+        .image-mid {
+
+            img {
+                
+                width: 100%;
+            }
+        }
 
         @include media-up(m) {
             @include make-wrapper();
@@ -136,5 +144,28 @@
     }   
 }
 
+.large {
+    @media only screen and (min-width: 1920px) {
+        .page-top {
+            height: 100vh;
 
-// Test overflow
+            .top-content {
+                justify-content: center;
+            }
+
+            .img-content {
+                padding: 25% 0 0 0;
+            }
+        }
+
+        .my-form {
+            transform: translateY(-15%);
+            .inner {
+                padding: 50% 25%
+            }
+        }
+    }
+}
+
+// adjust wrapper for super large screens
+// adjust form height

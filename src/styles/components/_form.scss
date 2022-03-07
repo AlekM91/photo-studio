@@ -1,0 +1,50 @@
+.my-form {
+    background: $white;
+    text-align: center;
+
+    @include media-up(s) {
+        @include make-wrapper();
+        @include make-wrapper-max-widths();
+        
+        padding: 0;
+    }
+
+    .inner {
+       padding: 0 30px 30px 30px;
+
+       @include media-up(m) {
+           padding: 93px 111px 130px 40px;
+       }
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    label {
+        font-size: 10px;
+        font-weight: bold;
+        color: $tertiary;
+        margin-bottom: 3px;
+
+        @include media-up(m) {
+            font-size: 24px;
+            text-align: start;
+        }
+    }
+
+    input, textarea {
+        border: 2px solid $tertiary;
+        margin-bottom: 25px;
+    }
+
+    textarea {
+        resize: none;
+        height: 80px;
+
+        @include media-up(m) {
+            height: 200px;
+        }
+    }
+}
