@@ -9,6 +9,8 @@
     background: #FF8A00;
     margin: auto;
     transition: .2s;
+    border: none;
+    box-shadow: 1px 1px 5px $black;
 
     &:hover {
         transform: translateY(-2px);

@@ -12,15 +12,27 @@
 
         .slide-1 {
             background-image: url('/src/assets/images/bg-1-mobile.jpg');
+
+            @include media-up(m) {
+                background-image: url('/src/assets/images/bg-1.jpg');
+            }
         }
 
         .slide-2 {
             background-image: url('/src/assets/images/bg-2-mobile.jpg');
+
+            @include media-up(m) {
+                background-image: url('/src/assets/images/bg-2.jpg');
+            }
         }
 
 
         .slide-3 {
             background-image: url('/src/assets/images/bg-3-mobile.jpg');
+
+            @include media-up(m) {
+                background-image: url('/src/assets/images/bg-3.jpg');
+            }
         }
     }
 }
